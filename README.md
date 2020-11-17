@@ -1,1 +1,1 @@
-# Virtual-Stock-Market-Simulator
+# stock-trading-simulator
