@@ -46,7 +46,7 @@ const LineChart = ({ pastDataPeriod, stockInfo, duration }) => {
           },
           title: {
             display: true,
-            text: `Adjusted closing stock price of ${stockInfo.ticker} over the past ${duration}`,
+            text: `Stock price of ${stockInfo.ticker} over the past ${duration}`,
             position: "bottom",
           },
           animation: {
