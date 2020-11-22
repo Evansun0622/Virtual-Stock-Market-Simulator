@@ -118,9 +118,6 @@ const StockCard = ({ setPurchasedStocks, purchasedStocks, currentStock }) => {
               duration={"month"}
             />
           </Grid>
-          <Box pt={4}>
-            <Copyright />
-          </Box>
           {selected && (
             <PurchaseModal
               stockInfo={stockInfo}

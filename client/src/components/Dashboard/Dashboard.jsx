@@ -2,11 +2,10 @@ import React from "react";
 import styles from "../Template/PageTemplate.module.css";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Container, Grid, Paper } from "@material-ui/core";
+import { Container, Grid, Paper } from "@material-ui/core";
 import Chart from "./Chart";
 import Balance from "./Balance";
 import Purchases from "./Purchases";
-import Copyright from "../Template/Copyright";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -46,9 +45,6 @@ const Dashboard = ({ purchasedStocks }) => {
           </Paper>
         </Grid>
       </Grid>
-      <Box pt={4}>
-        <Copyright />
-      </Box>
     </Container>
   );
 };

@@ -4,7 +4,6 @@ import { Typography, Link } from "@material-ui/core/";
 const Copyright = () => {
   return (
     <div>
-      <br />
       <Typography variant="body2" color="textSecondary" align="center">
         This simulator is for entertainment & educational purposes only and uses
         fake money.
