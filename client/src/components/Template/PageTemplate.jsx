@@ -31,8 +31,6 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
     transition: theme.transitions.create(["width", "margin"], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
     }),
   },
   appBarShift: {
@@ -123,11 +121,13 @@ const PageTemplate = () => {
       <CssBaseline />
         <AppBar
           position="absolute"
+          style={{ background: '#2E3B55'}}
           className={clsx(
             styles.appBarBackground,
             classes.appBar,
             open && classes.appBarShift
           )}
+          
         >
           <Toolbar className={styles.toolbar}>
             <IconButton
