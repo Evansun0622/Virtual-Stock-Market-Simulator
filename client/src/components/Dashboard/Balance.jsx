@@ -8,16 +8,15 @@ const Balance = ({ purchasedStocks }) => {
   const { userData } = useContext(UserContext);
   const [portfolioBalance, setPortfolioBalance] = useState(0);
 
-  const getPortfolioBalance = () => {
-    let total = 0;
-    purchasedStocks.forEach((stock) => {
-      total += Number(stock.currentPrice) * Number(stock.quantity);
-    });
-
-    return Math.round((total + Number.EPSILON) * 100) / 100;
-  };
-
   useEffect(() => {
+    const getPortfolioBalance = () => {
+      let total = 0;
+      purchasedStocks.forEach((stock) => {
+        total += Number(stock.currentPrice) * Number(stock.quantity);
+      });
+  
+      return Math.round((total + Number.EPSILON) * 100) / 100;
+    };
     setPortfolioBalance(getPortfolioBalance());
   }, [purchasedStocks]);
 
