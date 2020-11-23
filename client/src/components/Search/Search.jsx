@@ -1,13 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
 import UserContext from "../../context/UserContext";
-import { TextField, Container, Grid, Box, Card } from "@material-ui/core/";
+import { TextField, Container, Grid, Card } from "@material-ui/core/";
 import Autocomplete, {
   createFilterOptions,
 } from "@material-ui/lab/Autocomplete";
 import { makeStyles } from "@material-ui/core/styles";
 import LineChart from "../Template/LineChart";
 import BarChart from "./BarChart";
-import Copyright from "../Template/Copyright";
 import styles from "./Search.module.css";
 import Axios from "axios";
 import InfoCard from "./InfoCard";
