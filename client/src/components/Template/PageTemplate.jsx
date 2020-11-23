@@ -76,22 +76,21 @@ const PageTemplate = () => {
     history.push("/login");
   }
 
-  const getPurchasedStocks = async () => {
-    const url = `/api/stock/${userData.user.id}`;
-    const headers = {
-      "x-auth-token": userData.token,
-    };
-
-    const response = await Axios.get(url, {
-      headers,
-    });
-
-    if (response.data.status === "success") {
-      setPurchasedStocks(response.data.stocks);
-    }
-  };
-
   useEffect(() => {
+    const getPurchasedStocks = async () => {
+      const url = `/api/stock/${userData.user.id}`;
+      const headers = {
+        "x-auth-token": userData.token,
+      };
+  
+      const response = await Axios.get(url, {
+        headers,
+      });
+  
+      if (response.data.status === "success") {
+        setPurchasedStocks(response.data.stocks);
+      }
+    };
     getPurchasedStocks();
   }, []);
 
