@@ -4,7 +4,7 @@ import Title from "../Template/Title";
 import styles from "./Search.module.css";
 import clsx from "clsx";
 
-const HeaderText = ({ text }) => {
+const Header = ({ text }) => {
   return (
     <Typography variant="body1" color="inherit" align="center" display="block">
       {text}
@@ -12,7 +12,7 @@ const HeaderText = ({ text }) => {
   );
 };
 
-const BodyText = ({ text }) => {
+const Body = ({ text }) => {
   return (
     <Typography variant="body2" color="inherit" align="center" display="block">
       {text}
@@ -20,7 +20,7 @@ const BodyText = ({ text }) => {
   );
 };
 
-const InfoCard = ({ stockInfo, price }) => {
+const Info = ({stockInfo, price}) => {
   return (
     <Grid container spacing={3}>
       <Grid
@@ -35,20 +35,20 @@ const InfoCard = ({ stockInfo, price }) => {
           <Grid container spacing={3} className={styles.addMargin}>
             <Grid item sm={3} xs={4} className={styles.centerGrid}>
               <div className={styles.information}>
-                <HeaderText text={"Stock Symbol:"} />
-                <BodyText text={stockInfo.ticker} />
+                <Header text={"Stock Symbol:"} />
+                <Body text={stockInfo.ticker} />
               </div>
             </Grid>
             <Grid item sm={3} xs={4} className={styles.centerGrid}>
               <div className={styles.information}>
-                <HeaderText text={"Current Price:"} />
-                <BodyText text={price} />
+                <Header text={"Current Price:"} />
+                <Body text={price} />
               </div>
             </Grid>
             <Grid item sm={3} xs={4} className={styles.centerGrid}>
               <div className={styles.information}>
-                <HeaderText text={"Exchange:"} />
-                <BodyText text={stockInfo.exchangeCode} />
+                <Header text={"Exchange:"} />
+                <Body text={stockInfo.exchangeCode} />
               </div>
             </Grid>
           </Grid>
@@ -58,4 +58,4 @@ const InfoCard = ({ stockInfo, price }) => {
   );
 };
 
-export default InfoCard;
+export default Info;

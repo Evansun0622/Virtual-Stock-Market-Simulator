@@ -10,7 +10,7 @@ import SaleModal from "./SaleModal";
 import styles from "./Dashboard.module.css";
 
 const Purchases = ({ purchasedStocks }) => {
-  const [saleOpen, setSaleOpen] = useState(false);
+  const [start, setStart] = useState(false);
   const [stock, setStock] = useState(undefined);
 
   const roundNumber = (num) => {
@@ -19,7 +19,7 @@ const Purchases = ({ purchasedStocks }) => {
 
   const openSaleModal = (stock) => {
     setStock(stock);
-    setSaleOpen(true);
+    setStart(true);
   };
 
   return (
@@ -94,8 +94,8 @@ const Purchases = ({ purchasedStocks }) => {
             })}
           </TableBody>
         </Table>
-        {saleOpen && stock && (
-          <SaleModal setSaleOpen={setSaleOpen} stock={stock} />
+        {start && stock && (
+          <SaleModal setStart={setStart} stock={stock} />
         )}
       </div>
     </React.Fragment>

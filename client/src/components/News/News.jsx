@@ -94,7 +94,7 @@ const News = () => {
     const getCards = async () => {
       const url = "/api/news";
       const response = await Axios.get(url);
-      if (response.data.status === "success" && response.data.data.length > 0) {
+      if (response.data.data.length > 0 && response.data.status === "success") {
         const newsCards = response.data.data.slice(0, 9);
         setCards(newsCards);
       } else {

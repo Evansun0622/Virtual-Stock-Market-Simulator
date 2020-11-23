@@ -23,22 +23,20 @@ const Dashboard = ({ purchasedStocks }) => {
   const classes = useStyles();
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
+ 
   return (
     <Container maxWidth="lg" className={styles.container}>
       <Grid container spacing={3}>
-        {/* Chart */}
         <Grid item xs={12} md={8} lg={9}>
           <Paper className={fixedHeightPaper}>
             <Chart />
           </Paper>
         </Grid>
-        {/* Balance */}
         <Grid item xs={12} md={4} lg={3}>
           <Paper className={fixedHeightPaper}>
             <Balance purchasedStocks={purchasedStocks} />
           </Paper>
         </Grid>
-        {/* Recent Purchases */}
         <Grid item xs={12}>
           <Paper className={classes.paper}>
             <Purchases purchasedStocks={purchasedStocks} />
@@ -48,5 +46,4 @@ const Dashboard = ({ purchasedStocks }) => {
     </Container>
   );
 };
-
 export default Dashboard;
