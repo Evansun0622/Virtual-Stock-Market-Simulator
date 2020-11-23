@@ -1,3 +1,7 @@
+# Stock Simulator
+
+Comp426 Final Project
+
 ## Available Scripts
 
 In the project directory, you can run:
