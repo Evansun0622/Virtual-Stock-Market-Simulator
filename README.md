@@ -8,7 +8,7 @@ This web app is intended to provide a simulation of the real stock market. Every
 
 ## Tech Stack
 
-we used React.js as our frontend framework, and Express, Node as the backend framework. We store user's information in Mongodb and the deploy the database on MongoDB Atlas.
+We used React.js as our frontend framework, and Express, Node as the backend framework. We store user's information in Mongodb and the deploy the database on MongoDB Atlas.
 The 3rd party API that we used are https://finnhub.io/ and https://www.tiingo.com/, one for retreiving the latest market news and one for retrieving the stock price.
 
 ## Available Scripts
