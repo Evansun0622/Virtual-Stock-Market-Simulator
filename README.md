@@ -14,7 +14,7 @@ The 3rd party API that we used are https://finnhub.io/ and https://www.tiingo.co
 ## API Documentation
 
 ### Market News
-Sample Requests:
+Sample Request:
 ```
 import requests
 r = requests.get('https://finnhub.io/api/v1/news?category=general&token=bupiv4v48v6tm7o3vs9g')
@@ -58,6 +58,42 @@ Sample Response:
     "url": "https://www.cnbc.com/2020/08/04/anthony-levandowski-gets-18-months-in-prison-for-stealing-google-self-driving-car-files.html"
   }
   }]
+```
+### End-of-Day Stock Price
+```Sample Request:
+var request = require('request');
+var requestOptions = {
+        'url': 'https://api.tiingo.com/tiingo/daily/aapl?token=157d6ccabf72a9cc3251bb252504bc39f61b040e',
+        'headers': {
+            'Content-Type': 'application/json'
+            }
+        };
+
+request(requestOptions,
+        function(error, response, body) {
+            console.log(body);
+        }
+);  
+```
+
+Sample Response:
+```
+{
+    "ticker": "AAPL",
+    "name": "Apple Inc",
+    "exchangeCode": "NASDAQ",
+    "startDate": "1980-12-12",
+    "endDate": "2019-01-25",
+    "description": "Apple Inc. (Apple) designs, manufactures and markets mobile communication and media devices, personal
+computers, and portable digital music players, and a variety of related software, services, peripherals, networking
+solutions, and third-party digital content and applications. The Company's products and services include iPhone, iPad,
+Mac, iPod, Apple TV, a portfolio of consumer and professional software applications, the iOS and OS X operating
+systems, iCloud, and a variety of accessory, service and support offerings. The Company also delivers digital content
+and applications through the iTunes Store, App StoreSM, iBookstoreSM, and Mac App Store. The Company distributes its
+products worldwide through its retail stores, online stores, and direct sales force, as well as through third-party
+cellular network carriers, wholesalers, retailers, and value-added resellers. In February 2012, the Company acquired
+app-search engine Chomp."
+}
 ```
 ## Available Scripts  
 
