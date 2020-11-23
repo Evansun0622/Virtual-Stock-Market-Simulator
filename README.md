@@ -17,4 +17,4 @@ The page will reload if you make edits.<br>
 You will also see any lint errors in the console. <br>
 
 This app is also deployed on Heroku. <br>
-Go to [https://comp426-final-project.herokuapp.com/] (here) to view it online.
+Go to [here] (https://comp426-final-project.herokuapp.com/) to view it online.
