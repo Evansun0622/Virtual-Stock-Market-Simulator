@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Evansun0622/Virtual-Stock-Market-Simulator"
+    "url": "git+https://github.com/Evansun0622/Virtual-Stock-Market-Simulator.git"
   },
   "author": "Evan Sun, Joe Lin, Eric Tong, Kevin Li (Comp 426 Group)",
   "license": "ISC",
