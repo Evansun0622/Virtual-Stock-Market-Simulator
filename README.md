@@ -15,8 +15,11 @@ The 3rd party API that we used are https://finnhub.io/ and https://www.tiingo.co
 
 ### Market News
 Sample Requests:
-/news?category=general
-/news?category=forex&minId=10
+```
+import requests
+r = requests.get('https://finnhub.io/api/v1/news?category=general&token=bupiv4v48v6tm7o3vs9g')
+print(r.json())
+```
 
 Sample Response:
 ```
