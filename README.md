@@ -2,6 +2,9 @@
 
 Comp426 Final Project
 
+## Introduction
+
+This web app is intended to provide a simulation of the real stock market. Every user is given an initial amount of 100000 dollars, which they can use to purchase a variety of stocks. 
 ## Available Scripts
 
 In the project directory, you can run:
