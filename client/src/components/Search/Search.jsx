@@ -7,7 +7,6 @@ import Autocomplete, {
 import { makeStyles } from "@material-ui/core/styles";
 import LineChart from "../Template/LineChart";
 import BarChart from "./BarChart";
-import Copyright from "../Template/Copyright";
 import styles from "./Search.module.css";
 import Axios from "axios";
 import InfoCard from "./InfoCard";
@@ -118,9 +117,6 @@ const StockCard = ({ setPurchasedStocks, purchasedStocks, currentStock }) => {
               duration={"month"}
             />
           </Grid>
-          <Box pt={4}>
-            <Copyright />
-          </Box>
           {selected && (
             <PurchaseModal
               stockInfo={stockInfo}
