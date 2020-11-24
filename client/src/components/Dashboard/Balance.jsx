@@ -22,16 +22,50 @@ const Balance = ({ purchasedStocks }) => {
 
   return (
     <React.Fragment>
-      {chartData && (
-        <div style={{ minHeight: "240px" }}>
-          <Title>Explore {chartData.name}'s Stock Chart</Title>
-          <LineChart
-            pastDataPeriod={chartData.data}
-            stockInfo={{ ticker: chartData.ticker }}
-            duration={"3 years"}
-          />
+      <Title>Current Balance</Title>
+      <br />
+      <div className={styles.depositContext}>
+        <Typography color="textSecondary" align="center">
+          Cash Balance:
+        </Typography>
+
+        <Typography component="p" variant="h6" align="center">
+          ${userData ? userData.user.balance.toLocaleString() : "$---"}
+        </Typography>
+        <Typography color="textSecondary" align="center">
+          Portfolio Balance:
+        </Typography>
+
+        <Typography component="p" variant="h6" align="center" gutterBottom>
+          ${portfolioBalance.toLocaleString()}
+        </Typography>
+        <div className={styles.addMargin}>
+          <Typography color="textSecondary" align="center">
+            Total:
+          </Typography>
+
+          <Typography
+            component="p"
+            variant="h4"
+            align="center"
+            className={
+              Number(userData.user.balance + portfolioBalance) >= 100000
+                ? styles.positive
+                : styles.negative
+            }
+          >
+            $
+            {userData
+              ? (userData.user.balance + portfolioBalance).toLocaleString()
+              : "---"}
+          </Typography>
         </div>
-      )}
+      </div>
+      <div>
+        <Typography color="textSecondary" align="center">
+          {new Date().toDateString()}
+        </Typography>
+      </div>
     </React.Fragment>
   );
 };
