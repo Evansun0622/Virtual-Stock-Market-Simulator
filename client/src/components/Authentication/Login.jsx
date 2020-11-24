@@ -93,7 +93,7 @@ const Login = () => {
                   type="password"
                   id="password"
                   autoComplete="current-password"
-                  error={passwordError.length > 0 ? true : false}
+                  error={passwordError.length > 0}
                   helperText={passwordError}
                   value={password}
                   onChange={onChangePassword}
