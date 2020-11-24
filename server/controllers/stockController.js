@@ -24,7 +24,7 @@ exports.purchaseStock = async (req, res) => {
     }
 
     const totalPrice = quantity * price;
-    if (user.balance - totalPrice < 0) {
+    if (user.balance < totalPrice) {
       return res.status(200).json({
         status: "fail",
         message: `You don't have enough cash to purchase this stock.`,
