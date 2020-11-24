@@ -22,15 +22,11 @@ const DB = process.env.MONGO_URI.replace(
   process.env.MONGO_PASSWORD
 );
 
-mongoose
-  .connect(DB, {
+mongoose.connect(DB, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
-  })
-  .then(() => {
-    console.log("Connected to DB");
   })
   .catch((err) => console.log(err));
 
