@@ -205,7 +205,7 @@ const stocks = [
   { name: "Boeing", ticker: "BA" },
   { name: "Cisco", ticker: "CSCO" },
   { name: "Goldman Sachs", ticker: "GS" },
-  { name: "Johson & Johnson", ticker: "JNJ" },
+  { name: "Johnson & Johnson", ticker: "JNJ" },
   { name: "Coca-Cola", ticker: "KO" },
   { name: "McDonald's", ticker: "MCD" },
   { name: "Nike", ticker: "NKE" },
