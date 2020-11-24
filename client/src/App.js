@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import styles from "./App.module.css";
 import { Login, Register, NotFound, PageTemplate } from "./components";
 import UserContext from "./context/UserContext";
 import Axios from "axios";
@@ -48,7 +47,7 @@ function App() {
   return (
     <Router>
       <UserContext.Provider value={{ userData, setUserData }}>
-        <div className={styles.container}>
+        <div>
           <Switch>
             {userData.user ? (
               <Route path="/" exact component={PageTemplate} />

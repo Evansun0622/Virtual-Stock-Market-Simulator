@@ -51,7 +51,7 @@ exports.loginUser = async (req, res) => {
     if (!username || !password) {
       return res.status(200).json({
         status: "fail",
-        message: "Not all fields have been entered.",
+        message: "Empty name or password.",
       });
     }
 
