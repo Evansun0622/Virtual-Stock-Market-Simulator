@@ -150,7 +150,7 @@ const Search = ({ setPurchasedStocks, purchasedStocks }) => {
     <Container className={classes.addMargin}>
       <Autocomplete
         value={value}
-        onChange={onSearchChange}
+        onChange={_.debounce(onSearchChange, 300)}
         filterOptions={(options, params) => {
           let filtered = filter(options, params);
           if (currentStock) {
