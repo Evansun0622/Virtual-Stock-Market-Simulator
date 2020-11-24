@@ -4,17 +4,17 @@ import Title from "../Template/Title";
 import styles from "./Search.module.css";
 import clsx from "clsx";
 
-const BodyText = ({ text }) => {
+const HeaderText = ({ text }) => {
   return (
-    <Typography variant="body2" color="inherit" align="center" display="block">
+    <Typography variant="body1" color="inherit" align="center" display="block">
       {text}
     </Typography>
   );
 };
 
-const HeaderText = ({ text }) => {
+const BodyText = ({ text }) => {
   return (
-    <Typography variant="body1" color="inherit" align="center" display="block">
+    <Typography variant="body2" color="inherit" align="center" display="block">
       {text}
     </Typography>
   );

@@ -31,6 +31,19 @@ const BarChart = ({ sixMonthAverages, stockInfo }) => {
       }}
       options={{
         maintainAspectRatio: false,
+        title: {
+          display: true,
+          text: `Average closing price per month of ${stockInfo.ticker} over the past 6 months`,
+          position: "bottom",
+        },
+        layout: {
+          padding: {
+            left: 10,
+            right: 10,
+            top: 15,
+            bottom: 0,
+          },
+        },
         scales: {
           yAxes: [
             {
@@ -41,19 +54,6 @@ const BarChart = ({ sixMonthAverages, stockInfo }) => {
           ],
         },
         legend: { display: false },
-        layout: {
-          padding: {
-            left: 10,
-            right: 10,
-            top: 15,
-            bottom: 0,
-          },
-        },
-        title: {
-          display: true,
-          text: `Average closing price per month of ${stockInfo.ticker} over the past 6 months`,
-          position: "bottom",
-        },
         animation: {
           duration: 2000,
         },
