@@ -75,7 +75,7 @@ exports.sellStock = async (req, res) => {
         message: "Credentials couldn't be validated.",
       });
     }
-
+ 
     const user = await User.findById(userId);
 
     if (!user) {
