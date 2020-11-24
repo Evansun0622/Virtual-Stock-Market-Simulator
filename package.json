@@ -1,0 +1,38 @@
+{
+    "name": "stock-trading-simulator",
+    "version": "1.0.0",
+    "description": "Stock Trading Simulator Web App",
+    "main": "./server/server.js",
+    "scripts": {
+      "start": "node server/server.js",
+      "build": "cd client && npm run build",
+      "install-client": "cd client && npm install",
+      "heroku-postbuild": "npm run install-client && npm run build"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Evansun0622/Virtual-Stock-Market-Simulator"
+    },
+    "author": "Evan Sun, Eric Tong, Joe Lin, Kevin Li",
+    "bugs": {
+      "url": "https://github.com/Evansun0622/Virtual-Stock-Market-Simulator/issues"
+    },
+    "homepage": "https://github.com/Evansun0622/Virtual-Stock-Market-Simulator#readme",
+    "dependencies": {
+      "axios": "^0.20.0",
+      "bcrypt": "^5.0.0",
+      "bcryptjs": "^2.4.3",
+      "cookie-parser": "^1.4.5",
+      "cors": "^2.8.5",
+      "dotenv": "^8.2.0",
+      "express": "^4.17.1",
+      "express-session": "^1.17.1",
+      "jsonwebtoken": "^8.5.1",
+      "mongoose": "^5.10.14",
+      "passport": "^0.4.1",
+      "passport-local": "^1.0.0"
+    },
+    "engines": {
+      "node": "14.0.0"
+    }
+  }
