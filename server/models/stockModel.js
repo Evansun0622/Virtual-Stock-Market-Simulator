@@ -6,21 +6,21 @@ const stockSchema = new Schema({
     type: String,
     required: true,
   },
-  ticker: {
-    type: String,
-    required: true,
-  },
   quantity: {
     type: Number,
     required: true,
   },
-  price: {
-    type: Number,
+  ticker: {
+    type: String,
     required: true,
   },
   date: {
     type: Date,
     default: Date.now(),
+  },
+  price: {
+    type: Number,
+    required: true,
   },
 });
 
