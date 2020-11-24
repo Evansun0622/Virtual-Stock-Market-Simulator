@@ -53,9 +53,10 @@ const PurchaseModalContent = ({
   setPurchasedStocks,
   purchasedStocks,
 }) => {
+  const { userData, setUserData } = useContext(UserContext);
   const [quantity, setQuantity] = useState(1);
   const [total, setTotal] = useState(Number(pastDay.adjClose));
-  const { userData, setUserData } = useContext(UserContext);
+  
 
   const handleQuantityChange = (e) => {
     if (!isNaN(e.target.value)) {

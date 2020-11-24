@@ -35,7 +35,7 @@ const SaleModal = ({ setSaleOpen, stock }) => {
 };
 
 const SaleModalContent = ({ setSaleOpen, stock }) => {
-  const { userData } = useContext(UserContext);
+  const { info } = useContext(UserContext);
   const [quantity, setQuantity] = useState(1);
 
   const handleQuantityChange = (e) => {
@@ -52,13 +52,13 @@ const SaleModalContent = ({ setSaleOpen, stock }) => {
     e.preventDefault();
 
     const headers = {
-      "x-auth-token": userData.token,
+      "x-auth-token": info.token,
     };
 
     const data = {
       stockId: stock.id,
       quantity: Number(quantity),
-      userId: userData.user.id,
+      userId: info.user.id,
       price: Number(stock.currentPrice),
     };
 

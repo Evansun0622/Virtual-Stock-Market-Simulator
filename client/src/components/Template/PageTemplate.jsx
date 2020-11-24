@@ -86,7 +86,6 @@ const PageTemplate = () => {
       const response = await Axios.get(url, {
         headers,
       });
-  
       if (response.data.status === "success") {
         setPurchasedStocks(response.data.stocks);
       }
@@ -126,6 +125,7 @@ const PageTemplate = () => {
             classes.appBar,
             open && classes.appBarShift
           )}
+          
         >
           <Toolbar className={styles.toolbar}>
             <IconButton

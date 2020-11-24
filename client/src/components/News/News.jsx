@@ -18,20 +18,20 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     marginRight: theme.spacing(2),
   },
-  cardGrid: {
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8),
+  cardMedia: {
+    paddingTop: "56.25%", // 16:9
+  },
+  cardContent: {
+    flexGrow: 1,
   },
   card: {
     height: "100%",
     display: "flex",
     flexDirection: "column",
   },
-  cardMedia: {
-    paddingTop: "56.25%", // 16:9
-  },
-  cardContent: {
-    flexGrow: 1,
+  cardGrid: {
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8),
   },
 }));
 
@@ -94,7 +94,7 @@ const News = () => {
     const getCards = async () => {
       const url = "/api/news";
       const response = await Axios.get(url);
-      if (response.data.status === "success" && response.data.data.length > 0) {
+      if (response.data.data.length > 0 && response.data.status === "success") {
         const newsCards = response.data.data.slice(0, 9);
         setCards(newsCards);
       } else {

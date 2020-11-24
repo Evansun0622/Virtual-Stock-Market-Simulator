@@ -9,7 +9,7 @@ const Balance = ({ purchasedStocks }) => {
   const [portfolioBalance, setPortfolioBalance] = useState(0);
 
   useEffect(() => {
-    const getPortfolioBalance = () => {
+    const portfolioBalance = () => {
       let total = 0;
       purchasedStocks.forEach((stock) => {
         total += Number(stock.currentPrice) * Number(stock.quantity);
@@ -17,7 +17,7 @@ const Balance = ({ purchasedStocks }) => {
   
       return Math.round((total + Number.EPSILON) * 100) / 100;
     };
-    setPortfolioBalance(getPortfolioBalance());
+    setPortfolioBalance(portfolioBalance());
   }, [purchasedStocks]);
 
   return (
@@ -69,5 +69,13 @@ const Balance = ({ purchasedStocks }) => {
     </React.Fragment>
   );
 };
-
+/*
+const BarChartCard = ({ sixMonthAverages, stockInfo }) => {
+  return (
+    <Grid item xs={12} sm component={Card} className={styles.card}>
+      <BarChart sixMonthAverages={sixMonthAverages} stockInfo={stockInfo} />
+    </Grid>
+  );
+};
+*/
 export default Balance;

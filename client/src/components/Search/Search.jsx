@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import UserContext from "../../context/UserContext";
-import { TextField, Container, Grid, Card } from "@material-ui/core/";
+import { TextField, Container, Grid, Box, Card } from "@material-ui/core/";
 import Autocomplete, {
   createFilterOptions,
 } from "@material-ui/lab/Autocomplete";
@@ -150,7 +150,7 @@ const Search = ({ setPurchasedStocks, purchasedStocks }) => {
     <Container className={classes.addMargin}>
       <Autocomplete
         value={value}
-        onChange={_.debounce(onSearchChange, 300)}
+        onChange={onSearchChange}
         filterOptions={(options, params) => {
           let filtered = filter(options, params);
           if (currentStock) {
