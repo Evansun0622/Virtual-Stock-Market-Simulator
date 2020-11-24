@@ -126,7 +126,6 @@ const PageTemplate = () => {
             classes.appBar,
             open && classes.appBarShift
           )}
-          
         >
           <Toolbar className={styles.toolbar}>
             <IconButton
