@@ -6,13 +6,13 @@ const userSchema = new Schema(
     username: {
       type: String,
       required: [true, "Username is required."],
+      minlength: [4, "Username must be 4-15 characters."],
+      maxlength: [15, "Username must be 4-15 characters."],
       lowercase: true,
     },
     password: {
       type: String,
       required: [true, "Password is required."],
-      minlength: [4, "Username must be 4-15 characters."],
-      maxlength: [15, "Username must be 4-15 characters."],
     },
     balance:{
       type: Number,
