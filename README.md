@@ -1,6 +1,6 @@
 # Stock Simulator
   
-Comp426 Final Project
+Comp426 Final Project <br>
 Group Name: Team SoMao
 ## Introduction
   
